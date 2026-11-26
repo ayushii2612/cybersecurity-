@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionGuard | Security Simulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛡️ SessionGuard</h1>
+    <p>Session Hijacking & Security Simulation</p>
+</header>
+
+<main>
+    <section class="dashboard">
+        <h2>Session Monitoring Dashboard</h2>
+
+        <div class="stats">
+            <div class="card">
+                <h3>Session Status</h3>
+                <p id="status">Inactive</p>
+            </div>
+
+            <div class="card">
+                <h3>Security Mode</h3>
+                <p id="mode">Secure</p>
+            </div>
+
+            <div class="card">
+                <h3>Security Alert</h3>
+                <p id="alert">None</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <h3>Simulation Controls</h3>
+
+            <button onclick="login()">Simulate Login</button>
+            <button onclick="exposure()">Simulate Exposure Alert</button>
+            <button onclick="secureSession()">Apply Security</button>
+            <button onclick="expireSession()">Expire Session</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <div class="session">
+            <h3>Session Information</h3>
+            <p>Demo User: <span>Student</span></p>
+            <p>Demo Session: <span id="session">Not generated</span></p>
+            <p>Session State: <span id="state">Inactive</span></p>
+        </div>
+
+        <div class="logs">
+            <h3>Security Activity Logs</h3>
+            <ul id="logs">
+                <li>System initialized.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<section class="security-analysis">
+
+    <h2>Security Analysis & Protection</h2>
+
+    <div class="security-card">
+        <h3>🔒 HTTPS</h3>
+        <p>Encrypts communication between the browser and server.</p>
+        <span>Protection: Data in Transit</span>
+    </div>
+
+    <div class="security-card">
+        <h3>🛡️ HttpOnly Cookies</h3>
+        <p>Prevents ordinary JavaScript from reading session cookies.</p>
+        <span>Protection: Cookie Access</span>
+    </div>
+
+    <div class="security-card">
+        <h3>🔐 Secure Cookies</h3>
+        <p>Restricts cookie transmission to secure HTTPS connections.</p>
+        <span>Protection: Secure Transmission</span>
+    </div>
+
+    <div class="security-card">
+        <h3>🌐 SameSite Attribute</h3>
+        <p>Controls when cookies are sent with cross-site requests.</p>
+        <span>Protection: Cross-Site Requests</span>
+    </div>
+
+    <div class="security-card">
+        <h3>⏱️ Session Timeout</h3>
+        <p>Expires sessions after a defined period of inactivity.</p>
+        <span>Protection: Session Lifetime</span>
+    </div>
+
+    <div class="security-card">
+        <h3>♻️ Session Regeneration</h3>
+        <p>Creates a new session identifier after authentication.</p>
+        <span>Protection: Session Fixation</span>
+    </div>
+
+</section>
+<section class="comparison">
+
+    <h2>⚔️ Threats vs Security Defenses</h2>
+
+    <div class="comparison-container">
+
+        <div class="threat-box">
+            <h3>⚠️ Common Threats</h3>
+            <p>Session Exposure</p>
+            <p>Session Fixation</p>
+            <p>Cookie Theft</p>
+            <p>Unauthorized Session Use</p>
+        </div>
+
+        <div class="defense-box">
+            <h3>🛡️ Security Defenses</h3>
+            <p>HTTPS Encryption</p>
+            <p>Session Regeneration</p>
+            <p>HttpOnly Cookies</p>
+            <p>Session Invalidation</p>
+        </div>
+
+    </div>
+</section>
+<section class="activity-chart">
+
+    <h2>📊 Security Activity Analysis</h2>
+
+    <p class="chart-description">
+        Illustrative security event distribution
+        (sample simulation data)
+    </p>
+
+    <div class="chart-row">
+        <span>Normal Sessions</span>
+        <div class="bar-bg">
+            <div class="bar normal-bar"></div>
+        </div>
+        <span>80%</span>
+    </div>
+
+    <div class="chart-row">
+        <span>Exposure Alerts</span>
+        <div class="bar-bg">
+            <div class="bar alert-bar"></div>
+        </div>
+        <span>45%</span>
+    </div>
+
+    <div class="chart-row">
+        <span>Protected Sessions</span>
+        <div class="bar-bg">
+            <div class="bar protected-bar"></div>
+        </div>
+        <span>90%</span>
+    </div>
+
+    <div class="chart-row">
+        <span>Expired Sessions</span>
+        <div class="bar-bg">
+            <div class="bar expired-bar"></div>
+        </div>
+        <span>30%</span>
+    </div>
+
+</section>
+<footer>
+    <p>Educational simulation only | SessionGuard</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
